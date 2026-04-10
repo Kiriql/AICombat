@@ -1,6 +1,7 @@
 #include "ArenaCharacterBase.h"
 
 #include "AbilitySystemComponent.h"
+#include "AICombatArena/GameplayAbilitySystem/AttributeSets/BasicAttributeSet.h"
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 
@@ -28,6 +29,8 @@ AArenaCharacterBase::AArenaCharacterBase()
 	GetCharacterMovement()->BrakingDecelerationWalking = 2000.0f;
 	GetCharacterMovement()->BrakingDecelerationFalling = 1500.0f;
 	
+	
+	BasicAttributeSet = CreateDefaultSubobject<UBasicAttributeSet>("BasicAttributeSet");
 }
 
 void AArenaCharacterBase::BeginPlay()
