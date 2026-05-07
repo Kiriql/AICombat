@@ -28,7 +28,6 @@ void UArenaAbilitySystemComponent::OnRep_ActivateAbilities()
 	if (LastActivatableAbilities.Num() != ActivatableAbilities.Items.Num())
 	{
 		bAbilitiesChanged = true;
-		
 	}
 	else
 	{
